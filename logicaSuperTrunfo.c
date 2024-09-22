@@ -11,6 +11,27 @@ int main() {
 
     
     // Cadastro das Cartas:
+    char estado1 = 'A';
+    char codigo1[3] = "A01";
+    char cidade1[30] = "Campinas";
+    float populacao1;
+    float area1;
+    float pib1;
+    int turismo1;
+
+    char estado2;
+    char codigo2[3];
+    char cidade2[30];
+    float populacao2;
+    float area2;
+    float pib2;
+    int turismo2;
+
+    int opcao;
+
+    printf("Seja bem vindo ao jogo Super Trunfo Países!!\n");
+    
+
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
     // utilizando a função scanf para capturar as entradas.
     // utilize o código do primeiro desafio
