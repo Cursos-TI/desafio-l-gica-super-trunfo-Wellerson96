@@ -130,6 +130,8 @@ int main(){
 
 printf("Pronto! Agora que foram efetuados os cadastros das cartas iremos fazer a comparação das características para ver qual a carta vencedora.\n\n");
 
+//Aqui foram utilizadas estruturas de decisão compostas para verificar qual a carta vencedora.
+
 if(populacao > populacao1){
     printf("%s possui maior população!\n", cidade);
 }else{
