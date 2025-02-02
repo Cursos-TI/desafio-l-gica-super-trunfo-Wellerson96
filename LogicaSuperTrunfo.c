@@ -130,14 +130,41 @@ int main(){
 
 printf("Pronto! Agora que foram efetuados os cadastros das cartas iremos fazer a comparação das características para ver qual a carta vencedora.\n\n");
 
-printf("Se o resultado for 1 a primeira carta vence, se for 0, a segunda.\n\n");
+if(populacao > populacao1){
+    printf("%s possui maior população!\n", cidade);
+}else{
+    printf("%s Possui maior população!\n", cidade1);
+}
 
-        printf("População: %s > %s = %d\n", cidade, cidade1, populacao > populacao1);
-        printf("Área: %s > %s = %d\n", cidade, cidade1, area > area1);
-        printf("PIB: %s > %s = %d\n", cidade, cidade1, pib > pib1);
-        printf("Pontos túristicos: %s > %s = %d\n", cidade, cidade1, turismo > turismo1);
-        printf("Densidade: %s < %s = %d\n", cidade, cidade1, densidade < densidade1);
-        printf("PIB per capita: %s > %s = %d\n\n", cidade, cidade1, PIB > PIB1);
+if(area > area1){
+    printf("%s possui maior área!\n", cidade);
+}else{
+    printf("%s Possui maior área!\n", cidade1);
+}
+
+if(pib > pib1){
+    printf("%s possui maior PIB!\n", cidade);
+}else{
+    printf("%s Possui maior PIB!\n", cidade1);
+}
+
+if(turismo > turismo1){
+    printf("%s possui mais pontos turísticos!\n", cidade);
+}else{
+    printf("%s Possui mais pontos turísticos!\n", cidade1);
+}
+
+if(densidade < densidade1){
+    printf("%s possui menor densidade populacional!\n", cidade);
+}else{
+    printf("%s Possui menor densidade populacional!\n", cidade1);
+}
+
+if(densidade < densidade1){
+    printf("%s possui maior PIB per capita!\n\n", cidade);
+}else{
+    printf("%s Ppossui maior PIB per capita!\n\n", cidade1);
+}
 
 printf("Agora será calculado o superpoder de cada carta, que se refere a soma de todos os seus atributos.\n\n");
 
@@ -149,7 +176,11 @@ superpoder1 = populacao1 + area1 + pib1 + turismo1 + densidade1 + PIB1;
 printf("%s = %.2f\n", cidade, superpoder);
 printf("%s = %.2f\n\n", cidade1, superpoder1);
 
-        printf("Superpoder: %s > %s = %d\n", cidade, cidade1, superpoder > superpoder1);
+        if(superpoder > superpoder1){
+    printf("%s possui maior Superpoder!\n", cidade);
+        }else{
+    printf("%s Ppossui maior Superpoder!\n", cidade1);
+}
 
 
 
