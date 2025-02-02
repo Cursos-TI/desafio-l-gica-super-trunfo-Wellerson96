@@ -160,7 +160,7 @@ if(densidade < densidade1){
     printf("%s Possui menor densidade populacional!\n", cidade1);
 }
 
-if(densidade < densidade1){
+if(PIB > PIB1){
     printf("%s possui maior PIB per capita!\n\n", cidade);
 }else{
     printf("%s Ppossui maior PIB per capita!\n\n", cidade1);
