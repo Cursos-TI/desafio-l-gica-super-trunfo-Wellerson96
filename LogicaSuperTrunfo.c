@@ -199,7 +199,9 @@ switch(opcao){
     printf("%s Ppossui maior Superpoder!\n", cidade1);
  }
 
-        case 2: printf("O jogo baseia-se na comparação dos valores de sua carta com a dos outros jogadores. Para sua carta vencer, a característica escolhida precisa ter valor maior ou menor (em alguns casos) do que a carta dos seus adversários.");
+        case 2: printf("O jogo baseia-se na comparação dos valores de sua carta com a dos outros jogadores.\n"); 
+                printf("Para sua carta vencer, a característica escolhida precisa ter valor maior ou menor (em alguns casos)\n");
+                printf("do que a carta dos seus adversários.\n");
 
 }
 return 0;
