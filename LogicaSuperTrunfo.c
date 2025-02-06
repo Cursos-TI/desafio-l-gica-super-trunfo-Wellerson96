@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main(){
 
@@ -41,8 +43,9 @@ int main(){
 
     printf("Escolha uma opção:\n");
     printf("1. Iniciar jogo.\n");
-    printf("2. Regras.\n");
-    printf("3. Sair.\n");
+    printf("2. Jogo com atributos aleatórios.\n");
+    printf("3. Regras.\n");
+    printf("4. Sair.\n");
     scanf("%d", &opcao);
 
 switch(opcao){
@@ -270,9 +273,177 @@ printf("RESULTADO FINAL!!\n\n");
    break;
 
  
-        case 2: printf("O jogo baseia-se na comparação dos valores de sua carta com a dos outros jogadores.\n"); 
+        case 2: printf("Iniciando modo de atributos aleatórios...\n\n");
+
+        srand(time(0)); //Gerador de números aleatórios.
+
+            int populacao = rand() % 1000 + 1;
+            int area = rand() % 100 +1;
+            int pib = rand();
+            int turismo = rand();
+            float densidade = populacao / area;
+            float PIB = pib / populacao;
+            superpoder = populacao + area + pib + turismo + densidade + PIB;
+ 
+
+            int populacao1 = rand() % 1000 +1;
+            int area1 = rand() % 100 +1;
+            int pib1 = rand();
+            int turismo1 = rand();
+            float densidade1 = populacao1 / area1;
+            float PIB1 = pib1 / populacao1;
+            superpoder1 = populacao1 + area1 + pib1 + turismo1 + densidade1 + PIB1;
+            char pc[20] = "Computador";
+
+        printf("Nesse modo o jogador irá efetuar apenas o cadastro do nome da cidade que deseja atribuir os valores\n");
+        printf("que serão gerados de forma aleatória pelo computador e comparados com os atributos do mesmo.\n\n");
+
+         printf("Por favor, digite o nome da cidade:\n");
+         scanf("%s", &cidade);
+
+         printf("Agora escolha qual atributo deseja comparar primeiro:\n\n");
+ printf("1. População.\n");
+ printf("2. Área.\n");
+ printf("3. PIB.\n");
+ printf("4. Turismo.\n");
+ printf("5. Densidade.\n");
+ printf("6. PIB per capita.\n");
+ //printf("7. Superpoder.\n");
+ scanf("%d", &escolha);
+
+   switch(escolha){
+
+      case 1: printf("Você escolheu população.\n");
+      resultado = populacao > populacao1 ? 1 : 0;
+      printf("Valor populacao da cidade %s = %d e do %s = %d\n", cidade, populacao, pc, populacao1);
+      break;
+
+      case 2: printf("Você escolheu área.\n");
+      resultado = area > area1 ? 1 : 0;
+      printf("Valor da área da cidade %s = %d e do %s = %d\n", cidade, area, pc, area1);
+      break;
+
+      case 3: printf("Você escolheu PIB.\n");
+      resultado = pib > pib1 ? 1 : 0;
+      printf("Valor do PIB da cidade %s = %d e do %s = %d\n", cidade, pib, pc, pib1);
+      break;
+
+      case 4: printf("Você escolheu pontos turísticos.\n");
+      resultado = turismo > turismo1 ? 1 : 0;
+      printf("Quantidade de pontos turísticos da cidade %s = %d e do %s = %d\n", cidade, turismo, pc, turismo1);
+      break;
+
+      case 5: printf("Você escolheu densidade demográfica.\n");
+      resultado = densidade < densidade1 ? 1 : 0;
+      printf("Valor da densidade demográfica da cidade %s = %.2f e do %s = %.2f\n", cidade, densidade, pc, densidade1);
+      break;
+
+      case 6: printf("Você escolheu PIB per capita.\n");
+      resultado = PIB > PIB1 ? 1 : 0;
+      printf("Valor do PIB per capita da cidade %s = %.2f e do %s = %.2f\n", cidade, PIB, pc, PIB1);
+      break;
+
+      /*case 7: printf("Você escolheu superpoder.\n");
+      resultado = superpoder > superpoder1 ? 1 : 0;
+      printf("Valor do superpoder da cidade %s = %d e do %s = %d\n", cidade, superpoder, pc, superpoder1);
+      break;*/
+
+      default:
+      printf("Opção inválida!\n");
+   }
+
+if(resultado == 1){
+   printf("%s ganhou no primeiro atributo!\n\n", cidade);
+}else if(resultado == 0){
+   printf("%s ganhou no primeiro atributo!\n\n", pc);
+}else{
+   printf("Empate!\n");
+}
+
+printf("Escolha o segundo atributo a ser comparado:\n\n");
+ printf("1. População.\n");
+ printf("2. Área.\n");
+ printf("3. PIB.\n");
+ printf("4. Turismo.\n");
+ printf("5. Densidade.\n");
+ printf("6. PIB per capita.\n");
+ //printf("7. Superpoder.\n");
+ scanf("%d", &escolha1);
+
+   switch(escolha1){
+
+      case 1: printf("Você escolheu população.\n");
+      resultado1 = populacao > populacao1 ? 1 : 0;
+      printf("Valor populacao da cidade %s = %d e do %s = %d\n", cidade, populacao, pc, populacao1);
+      break;
+
+      case 2: printf("Você escolheu área.\n");
+      resultado1 = area > area1 ? 1 : 0;
+      printf("Valor da área da cidade %s = %d e do %s = %d\n", cidade, area, pc, area1);
+      break;
+
+      case 3: printf("Você escolheu PIB.\n");
+      resultado1 = pib > pib1 ? 1 : 0;
+      printf("Valor do PIB da cidade %s = %d e do %s = %d\n", cidade, pib, pc, pib1);
+      break;
+
+      case 4: printf("Você escolheu pontos turísticos.\n");
+      resultado1 = turismo > turismo1 ? 1 : 0;
+      printf("Quantidade de pontos turísticos da cidade %s = %d e do %s = %d\n", cidade, turismo, pc, turismo1);
+      break;
+
+      case 5: printf("Você escolheu densidade demográfica.\n");
+      resultado1 = densidade < densidade1 ? 1 : 0;
+       printf("Valor da densidade demográfica da cidade %s = %.2f e do %s = %.2f\n", cidade, densidade, pc, densidade1);
+      break;
+
+      case 6: printf("Você escolheu PIB per capita.\n");
+      resultado1 = PIB > PIB1 ? 1 : 0;
+      printf("Valor do PIB per capita da cidade %s = %.2f e do %s = %.2f\n", cidade, PIB, pc, PIB1);
+      break;
+
+     /* case 7: printf("Você escolheu superpoder.\n");
+      resultado1 = superpoder > superpoder1 ? 1 : 0;
+      printf("Valor do superpoder da cidade %s = %d e do %s = %d\n", cidade, superpoder, pc, superpoder1);
+      break;*/
+
+      default:
+      printf("Opção inválida!");
+   }
+
+   if(resultado1 == 1){
+   printf("%s ganhou no segundo atributo!\n\n", cidade);
+}else if(resultado1 == 0){
+   printf("%s ganhou no segundo atributo!\n\n", pc);
+}else{
+   printf("Empate!\n");
+}
+
+printf("RESULTADO FINAL!!\n\n");
+
+   if(resultado == 1 && resultado1 == 1){
+      printf("%s ganhou!!\n", cidade);
+
+   }else if(resultado == 0 && resultado1 == 0){
+      printf("%s ganhou!!\n", pc);
+
+   }else{
+      printf("Empate!!\n");
+   }
+
+
+   break;      
+
+
+
+         case 3: printf("O jogo baseia-se na comparação dos valores de sua carta com a dos outros jogadores.\n"); 
                 printf("Para sua carta vencer, a característica escolhida precisa ter valor maior ou menor (em alguns casos)\n");
                 printf("do que a carta dos seus adversários.\n");
+
+   break;         
+
+
+
 
 }
 return 0;
