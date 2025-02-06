@@ -199,13 +199,13 @@ switch(opcao){
       printf("Opção inválida!\n");
    }
 
-if(escolha == 1){
-   printf("%s ganhou no primeiro atributo!\n", cidade);
+if(resultado == 1){
+   printf("%s ganhou no primeiro atributo!\n\n", cidade);
 }else{
-   printf("%s ganhou no primeiro atributo!\n", cidade1);
+   printf("%s ganhou no primeiro atributo!\n\n", cidade1);
 }
 
- printf("Escolha o próximo atributo a ser comparado:\n\n");
+ printf("Escolha o segundo atributo a ser comparado:\n\n");
  printf("1. População.\n");
  printf("2. Área.\n");
  printf("3. PIB.\n");
@@ -249,8 +249,8 @@ if(escolha == 1){
       printf("Opção inválida!");
    }
 
-   if(escolha1 == 1){
-   printf("%s ganhou no segundo atributo!\n", cidade);
+   if(resultado1 == 1){
+   printf("%s ganhou no segundo atributo!\n\n", cidade);
 }else{
    printf("%s ganhou no segundo atributo!\n\n", cidade1);
 }
@@ -267,101 +267,9 @@ printf("RESULTADO FINAL!!\n\n");
       printf("Empate!!\n");
    }
      
-
-   
-
    break;
 
- //Aqui foram utilizadas estruturas de decisão compostas para verificar qual a carta vencedora.
-
- /* switch(opcao){
-
-    case 1:
-
- if(populacao > populacao1){
-    printf("%s possui maior população!\n", cidade);
- }else{
-    printf("%s Possui maior população!\n", cidade1);
- }
-
- break;
-
- case 2:
-
- if(area > area1){
-    printf("%s possui maior área!\n", cidade);
- }else{
-    printf("%s Possui maior área!\n", cidade1);
- }
-
- break;
-
- case 3:
-
- if(pib > pib1){
-    printf("%s possui maior PIB!\n", cidade);
- }else{
-    printf("%s Possui maior PIB!\n", cidade1);
- }
-
- break;
-
- case 4:
-
- if(turismo > turismo1){
-    printf("%s possui mais pontos turísticos!\n", cidade);
- }else{
-    printf("%s Possui mais pontos turísticos!\n", cidade1);
- }
-
- break;
-
- case 5:
-
- if(densidade < densidade1){
-    printf("%s possui menor densidade populacional!\n", cidade);
- }else{
-    printf("%s Possui menor densidade populacional!\n", cidade1);
- }
-
- break;
-
- case 6:
-
- if(PIB > PIB1){
-    printf("%s possui maior PIB per capita!\n\n", cidade);
- }else{
-    printf("%s Ppossui maior PIB per capita!\n\n", cidade1);
- }
-
- break;
-
- case 7:
-
- printf("Agora será calculado o superpoder de cada carta, que se refere a soma de todos os seus atributos.\n\n");
-
- double superpoder, superpoder1; // Variável criada para efetuar o calculo do superpoder.
-
- superpoder = populacao + area + pib + turismo + densidade + PIB;
- superpoder1 = populacao1 + area1 + pib1 + turismo1 + densidade1 + PIB1;
  
- printf("%s = %.2f\n", cidade, superpoder);
- printf("%s = %.2f\n\n", cidade1, superpoder1);
-
-        if(superpoder > superpoder1){
-    printf("%s possui maior Superpoder!\n", cidade);
-        }else{
-    printf("%s Ppossui maior Superpoder!\n", cidade1);
- }
-
- break;
-
- default:
- printf("Opção inválida!\n");
- 
- */
- 
-
         case 2: printf("O jogo baseia-se na comparação dos valores de sua carta com a dos outros jogadores.\n"); 
                 printf("Para sua carta vencer, a característica escolhida precisa ter valor maior ou menor (em alguns casos)\n");
                 printf("do que a carta dos seus adversários.\n");
