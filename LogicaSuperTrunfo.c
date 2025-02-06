@@ -143,11 +143,19 @@ switch(opcao){
 
         printf("\n");
 
+        double superpoder, superpoder1; // Variável criada para efetuar o calculo do superpoder.
+
+ superpoder = populacao + area + pib + turismo + densidade + PIB;
+ superpoder1 = populacao1 + area1 + pib1 + turismo1 + densidade1 + PIB1;
+
  printf("Pronto! Agora que foram efetuados os cadastros das cartas iremos fazer a comparação das características para ver qual a carta vencedora.\n\n");
 
+ printf("Você podera escolher dois atributos para comparar\n");
 
+ int escolha, escolha1; // Variáveis que irão assumir a escolha do jogador.
+ int resultado, resultado1;
 
- printf("Escolha qual atributo deseja comparar:\n\n");
+ printf("Escolha qual atributo deseja comparar primeiro:\n\n");
  printf("1. População.\n");
  printf("2. Área.\n");
  printf("3. PIB.\n");
@@ -155,11 +163,118 @@ switch(opcao){
  printf("5. Densidade.\n");
  printf("6. PIB per capita.\n");
  printf("7. Superpoder.\n");
- scanf("%d", &opcao);
+ scanf("%d", &escolha);
+
+   switch(escolha){
+
+      case 1: printf("Você escolheu população.\n");
+      resultado = populacao > populacao1 ? 1 : 0;
+      break;
+
+      case 2: printf("Você escolheu área.\n");
+      resultado = area > area1 ? 1 : 0;
+      break;
+
+      case 3: printf("Você escolheu PIB.\n");
+      resultado = pib > pib1 ? 1 : 0;
+      break;
+
+      case 4: printf("Você escolheu pontos turísticos.\n");
+      resultado = turismo > turismo1 ? 1 : 0;
+      break;
+
+      case 5: printf("Você escolheu densidade demográfica.\n");
+      resultado = densidade < densidade1 ? 1 : 0;
+      break;
+
+      case 6: printf("Você escolheu PIB per capita.\n");
+      resultado = PIB > PIB1 ? 1 : 0;
+      break;
+
+      case 7: printf("Você escolheu superpoder.\n");
+      resultado = superpoder > superpoder1 ? 1 : 0;
+      break;
+
+      default:
+      printf("Opção inválida!\n");
+   }
+
+if(escolha == 1){
+   printf("%s ganhou no primeiro atributo!\n", cidade);
+}else{
+   printf("%s ganhou no primeiro atributo!\n", cidade1);
+}
+
+ printf("Escolha o próximo atributo a ser comparado:\n\n");
+ printf("1. População.\n");
+ printf("2. Área.\n");
+ printf("3. PIB.\n");
+ printf("4. Turismo.\n");
+ printf("5. Densidade.\n");
+ printf("6. PIB per capita.\n");
+ printf("7. Superpoder.\n");
+ scanf("%d", &escolha1);
+
+   switch(escolha1){
+
+      case 1: printf("Você escolheu população.\n");
+      resultado1 = populacao > populacao1 ? 1 : 0;
+      break;
+
+      case 2: printf("Você escolheu área.\n");
+      resultado1 = area > area1 ? 1 : 0;
+      break;
+
+      case 3: printf("Você escolheu PIB.\n");
+      resultado1 = pib > pib1 ? 1 : 0;
+      break;
+
+      case 4: printf("Você escolheu pontos turísticos.\n");
+      resultado1 = turismo > turismo1 ? 1 : 0;
+      break;
+
+      case 5: printf("Você escolheu densidade demográfica.\n");
+      resultado1 = densidade < densidade1 ? 1 : 0;
+      break;
+
+      case 6: printf("Você escolheu PIB per capita.\n");
+      resultado1 = PIB > PIB1 ? 1 : 0;
+      break;
+
+      case 7: printf("Você escolheu superpoder.\n");
+      resultado1 = superpoder > superpoder1 ? 1 : 0;
+      break;
+
+      default:
+      printf("Opção inválida!");
+   }
+
+   if(escolha1 == 1){
+   printf("%s ganhou no segundo atributo!\n", cidade);
+}else{
+   printf("%s ganhou no segundo atributo!\n\n", cidade1);
+}
+
+printf("RESULTADO FINAL!!\n\n");
+
+   if(resultado == 1 && resultado1 == 1){
+      printf("%s ganhou!!\n", cidade);
+
+   }else if(resultado == 0 && resultado1 == 0){
+      printf("%s ganhou!!\n", cidade1);
+
+   }else{
+      printf("Empate!!\n");
+   }
+     
+
+   
+
+   break;
 
  //Aqui foram utilizadas estruturas de decisão compostas para verificar qual a carta vencedora.
 
- switch(opcao){
+ /* switch(opcao){
 
     case 1:
 
@@ -243,8 +358,9 @@ switch(opcao){
 
  default:
  printf("Opção inválida!\n");
-
- }
+ 
+ */
+ 
 
         case 2: printf("O jogo baseia-se na comparação dos valores de sua carta com a dos outros jogadores.\n"); 
                 printf("Para sua carta vencer, a característica escolhida precisa ter valor maior ou menor (em alguns casos)\n");
@@ -252,7 +368,6 @@ switch(opcao){
 
 }
 return 0;
-
 
 
 }
